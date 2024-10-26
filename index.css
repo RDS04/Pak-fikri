@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.medsos {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 90%;
+    max-width: 500px; /* Increased max-width */
+}
+
+.profile-pic {
+    width: 150px; /* Sesuaikan ukuran */
+    height: 150px; /* Sesuaikan ukuran */
+    border-radius: 50%; /* Membuat video menjadi lingkaran */
+    object-fit: cover; /* Menjaga video agar tidak terpotong */
+    margin-bottom: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: float 3s ease-in-out infinite; /* Animasi mengambang */
+}
+
+.medsos h2 {
+    font-size: 32px; /* Increased font size */
+    color: #ffffff;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.medsos p {
+    font-size: 20px; /* Increased font size */
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 8px;
+}
+
+.Medsos-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 35px;
+    width: 100%;
+    max-width: 380px; /* Menentukan lebar maksimal */
+    max-height: 300px; /* Tinggi maksimal untuk scroll */
+    overflow-y: auto; /* Scroll hanya jika konten melebihi tinggi maksimal */
+    scrollbar-width: thin; /* Menjadikan scrollbar lebih tipis (khusus Firefox) */
+}
+
+.Medsos-header::-webkit-scrollbar {
+    width: 8px; 
+    display: none;
+}
+
+.Medsos-header::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Warna scrollbar */
+    border-radius: 4px;
+}
+
+.Medsos-header::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang track */
+}
+
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to start */
+    font-size: 20px; /* Increased font size */
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 16px 25px;
+    width: 100%;
+    transition: all 0.3s ease;
+    /* backdrop-filter: blur(5px); */
+}
+
+.social-link img {
+
+    height: 45px; /* Increased size */
+    margin-right: 15px;
+    border-radius: 50%;
+    /* filter: brightness(0) invert(1); */
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px) scale(1.02); /* Added slight scale on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for profile picture */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.profile-pic {
+    animation: float 3s ease-in-out infinite;
+}
+.dev {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 768px) {
+    .medsos {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .medsos h2 {
+        font-size: 28px;
+    }
+
+    .medsos p {
+        font-size: 18px;
+    }
+
+    .social-link {
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+}
